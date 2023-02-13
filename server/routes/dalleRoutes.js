@@ -1,5 +1,8 @@
 import express from 'express'
+import * as dotenv from 'dotenv'
 import { Configuration, OpenAIApi } from 'openai'
+
+dotenv.config()
 
 const router = express.Router()
 
@@ -28,8 +31,10 @@ router.route('/').post(async (req, res) => {
 
     res.status(200).json({ photo: image })
   } catch (err) {
-    console.log(error)
-    res.status(500).send(error?.response.data.error.message)
+    console.log(err)
+    console.log(err?.response.data.error)
+
+    res.status(500).send(err?.response.data.error.message)
   }
 })
 
