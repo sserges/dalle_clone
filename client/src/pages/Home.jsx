@@ -18,6 +18,14 @@ const Home = () => {
 
     const [searchText, setSearchText] = useState('abc')
 
+    useEffect(() => {
+        const fetchPosts = async () => {
+
+        }
+
+        fetchPosts()
+    }, [])
+
 
     return (
         <section className='max-w-7xl mx-auto'>
