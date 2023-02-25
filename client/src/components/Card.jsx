@@ -1,6 +1,9 @@
-const Card = () => {
+import { download } from '../assets'
+import { downloadImage } from '../utils'
+
+const Card = ({ _id, name, prompt, photo }) => {
     return (
-        <div>Card</div>
+        <div className='rounded-xl group relative shadow-card'></div>
     )
 }
 
